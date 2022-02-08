@@ -8,9 +8,29 @@ _Useful Resources & Links_
 - [Components & Props](https://reactjs.org/docs/components-and-props.html)
 - [Listenable Events](https://reactjs.org/docs/events.html)
 
-### 1. Introduction
+### Introduction
 
-We'll learn how to build our first React project locally on our machine.
+1. React Core Syntax and JSX.
+2. Working with components.
+3. Working with Data.
+
+### Components
+* Component are reusable building blocks in our user interface.
+* Compnonents in the end are just a combination of HTML code.
+* CSS code for styling and possibly Javascript code for some logic.
+
+* React embraces this concept of components because of that reusablity aspect and it allows us to separate our concerns.
+
+* Having reusable building blocks helps us avoid repition.
+
+* Having a separation of concerns help us with keeping our code base small and manageable. 
+
+### How is a component built
+Mostly react components are about combining HTML and Javascript.
+
+Thus React allows us to create re-usable and reactive components consisting of HTML and Js.
+
+React uses Declarative Approach.
 
 ### 2. The Build Workflow
 
@@ -31,14 +51,16 @@ Before we setup a local project, we need to use a **more elaborate workflow** (t
 
 _Note: Create React App is a tool which have everything above out of the box – perfect to start a new React project :)_
 
-### 3. Using Create React App
+### Using Create React App
 
 ```sh
 # create a new create-react-app project
 npx create-react-app react-complete-guide --scripts-version 1.1.5
 ```
 
-### 4. Understanding the Folder Structure
+### Understanding the Folder Structure
+React code is just javascript code.
+index.js will be executed initially.
 
 ```
 /node_modules
@@ -52,7 +74,7 @@ yarn.lock
 
 All clear in this section.
 
-### 5. Understanding Component Basics
+### Understanding Component Basics
 
 Here is our first component. React is **all about component**!
 
@@ -77,7 +99,7 @@ class App extends Component {
 export default App;
 ```
 
-### 6. Understanding JSX
+### Understanding JSX
 
 Working without JSX, replace it with `React.createElement`.
 
@@ -100,11 +122,11 @@ class App extends Component {
 export default App;
 ```
 
-### 7. JSX Restrictions
+### JSX Restrictions
 
 For example, `class` can't be used in JSX, because JSX is JS and `class` is **a reserved word**. Also we can't return more than one root element (solution using Fragment `<></>`).
 
-### 8. Creating a Functional Component
+### Creating a Functional Component
 
 ```js
 // src/Person/Person.js
