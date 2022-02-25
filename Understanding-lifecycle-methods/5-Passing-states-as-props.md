@@ -10,15 +10,10 @@ class App extends React.Component {
   state = { lat: null, errorMessage: "" };
   /* Code we writing here is equivalent to defining the constructor function and initializing our state inside there. */
 
-  componentDidUpdate() {
+  componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
-      (position) => {
-        this.setState({ lat: position.coords.latitude });
-      },
-      (err) => {
-        this.setState({ errorMessage: err.message });
-        /* If anything goes wrong with get current position request */
-      }
+      (position) => this.setState({ lat: position.coords.latitude }),
+      (err) => this.setState({ errorMessage: err.message })
     );
   }
 
